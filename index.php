@@ -18,8 +18,18 @@
     $textStripTags = strip_tags($text, ['ul']);
 
     $star = '*';
+    $starAndComma = '*,';
     $brake = '<br>';
-    echo str_replace($star, $brake, $text);
+    $space = '';
+    if (preg_match('/\*,/', $textStripTags))
+    {
+      $textStrReplace = str_replace($starAndComma, $space, $textStripTags);
+    }
+
+    if(preg_match('/\*/', $textStripTags))
+    {
+      echo str_replace($star, $brake, $textStrReplace);
+    }
   ?>
 </body>
 </html>
