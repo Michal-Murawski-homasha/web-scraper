@@ -17,6 +17,13 @@
     echo $text;
     echo strip_tags($text);
     echo strip_tags($text, ['ul']);
+
+    if (preg_match('@^[*]{1}$@', $text)) {
+      echo '<br>';
+    }
+    else {
+      echo strip_tags($text, ['ul']);
+    }
   ?>
 </body>
 </html>
