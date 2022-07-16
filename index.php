@@ -21,7 +21,7 @@
     $star = '*';
     $starAndComma = '*,';
     $brake = '<br>';
-    $space = '';
+    $space = ',';
     if (preg_match('/\*,/', $textStripTags))
     {
       $textStrReplace = str_replace($starAndComma, $space, $textStripTags);
