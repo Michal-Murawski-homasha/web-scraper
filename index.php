@@ -45,6 +45,8 @@
       echo str_replace($star, $brake, $textStrReplace);
       echo 'Ilość znaków po przetworzeniu '.strlen($textStrReplace);
     }
+
+    echo $textStripTagsDiv;
   ?>
 </body>
 </html>
