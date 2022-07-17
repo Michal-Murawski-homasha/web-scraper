@@ -29,13 +29,15 @@
                 <div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/Plik:Olsztyn-ko%C5%9Bci%C3%B3%C5%82_garnizonowy.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Olsztyn-ko%C5%9Bci%C3%B3%C5%82_garnizonowy.jpg/220px-Olsztyn-ko%C5%9Bci%C3%B3%C5%82_garnizonowy.jpg" decoding="async" width="220" height="242" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Olsztyn-ko%C5%9Bci%C3%B3%C5%82_garnizonowy.jpg/330px-Olsztyn-ko%C5%9Bci%C3%B3%C5%82_garnizonowy.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Olsztyn-ko%C5%9Bci%C3%B3%C5%82_garnizonowy.jpg/440px-Olsztyn-ko%C5%9Bci%C3%B3%C5%82_garnizonowy.jpg 2x" data-file-width="1284" data-file-height="1411" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/Plik:Olsztyn-ko%C5%9Bci%C3%B3%C5%82_garnizonowy.jpg" class="internal" title="Powiększ"></a></div><a href="/wiki/Ko%C5%9Bci%C3%B3%C5%82_garnizonowy_Matki_Boskiej_Kr%C3%B3lowej_Polski_w_Olsztynie" title="Kościół garnizonowy Matki Boskiej Królowej Polski w Olsztynie">Kościół garnizonowy</a> – Olsztyn</div></div></div>';
     echo 'Ilość znaków przed przetworzeniem: '.strlen($textLi).'<br>';
     $textStripTagsLi = strip_tags($textLi, ['li']);
-    $textStripTagsDiv = strip_tags($textDiv, ['div']);
+    // $textStripTagsDiv = strip_tags($textDiv, ['div']);
     $textStripTagsA = strip_tags($textDiv, ['a']);
 
     $star = '*';
     $starAndComma = '*,';
     $brake = '<br>';
     $space = ',';
+    $aTab = '<a>';
+    $aTabBrake = '<br><a>';
     if (preg_match('/\*,/', $textStripTagsLi))
     {
       $textStrReplaceLi = str_replace($starAndComma, $space, $textStripTagsLi);
@@ -47,9 +49,14 @@
       echo 'Ilość znaków po przetworzeniu '.strlen($textStrReplaceLi);
     }
 
+    if (preg_match($aTab, $textStripTagsA)) {
+      $textStrReplaceA = str_replace($aTab, $brake, $textStripTagsA);
+    }
     echo "<p>$textDiv</p>";
-    echo "<p>$textStripTagsA</p>";
-    echo "<p>$textStripTagsDiv</p>";
+    echo "<p>$textStrReplaceA</p>";
+    $textStripTags = strip_tags($textStrReplaceA);
+    echo $textStripTags;
+    // echo "<p>$textStripTagsDiv</p>";
   ?>
 </body>
 </html>
