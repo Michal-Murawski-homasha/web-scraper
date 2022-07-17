@@ -47,6 +47,7 @@
       echo 'Ilość znaków po przetworzeniu '.strlen($textStrReplaceLi);
     }
 
+    echo $textStripTagsA;
     echo $textStripTagsDiv;
   ?>
 </body>
