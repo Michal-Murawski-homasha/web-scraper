@@ -17,6 +17,7 @@
     echo $text;
     echo 'Ilość znaków przed przetworzeniem: '.strlen($text).'<br>';
     $textStripTagsLi = strip_tags($text, ['li']);
+    $textStripTagsDiv = strip_tags($text, ['div']);
 
     $star = '*';
     $starAndComma = '*,';
