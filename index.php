@@ -10,10 +10,12 @@
   <?php
 
     $web = file_get_contents('https://pl.wikipedia.org/wiki/Miasta_w_Polsce#Lista_miast_w_Polsce_w_porz%C4%85dku_alfabetycznym');
-    echo '<h2>Ilość znaków przed przetworzeniem: '.strlen($web). '</h2><br>';
+    echo '<h2>Ilość znaków przed przetworzeniem: '. strlen($web) . '</h2><br>';
     // echo $web.'<br>';
+    $head = get_headers('https://pl.wikipedia.org/wiki/Miasta_w_Polsce#Lista_miast_w_Polsce_w_porz%C4%85dku_alfabetycznym');
+    print_r($head);
     $textStripTags = strip_tags($web, ['p','li','br']);
-    echo '<h2>Ilość znaków po przetworzeniu '.strlen($textStripTags). '</h2><br>';
+    echo '<h2>Ilość znaków po przetworzeniu '. strlen($textStripTags) . '</h2><br>';
     // $textStripTags = str_replace('/\<div\>\<\/div\>/', '/\<br\>/', $web);
     echo "<p>$textStripTags</p><br>";
 
