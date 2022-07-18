@@ -13,8 +13,8 @@
     echo 'Ilość znaków przed przetworzeniem: '.strlen($web).'<br>';
     echo $web;
     $textStripTagsLi = strip_tags($web, ['li']);
-    // $textStripTagsDiv = strip_tags($web, ['div']);
-    // $textStripTagsA = strip_tags($web, ['a']);
+    $textStripTagsDiv = strip_tags($web, ['div']);
+    $textStripTagsA = strip_tags($web, ['a']);
 
     $star = '*';
     $starAndComma = '*,';
