@@ -23,16 +23,9 @@
     $space = ',';
     $aTab = '<a>';
     $aTabBrake = '<br><a>';
-    if (preg_match('/\*,/', $textStripTagsLi))
-    {
-      $textStrReplaceLi = str_replace($starAndComma, $space, $textStripTagsLi);
-    }
 
-    if(preg_match('/\*/', $textStripTagsLi))
-    {
-      echo str_replace($star, $brake, $textStrReplaceLi);
-      echo 'Ilość znaków po przetworzeniu '.strlen($textStrReplaceLi);
-    }
+    // echo str_replace($star, $brake, $textStrReplaceLi);
+    echo 'Ilość znaków po przetworzeniu '.strlen($textStrReplaceLi);
 
     // if (preg_match($aTab, $textStripTagsA)) {
     //   $textStrReplaceA = str_replace($aTab, $brake, $textStripTagsA);
