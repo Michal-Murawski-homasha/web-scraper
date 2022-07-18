@@ -11,9 +11,9 @@
 
     $web = file_get_contents('https://pl.wikipedia.org/wiki/Miasta_w_Polsce#Lista_miast_w_Polsce_w_porz%C4%85dku_alfabetycznym');
     echo 'Ilość znaków przed przetworzeniem: '.strlen($web).'<br>';
-    // echo $web;
+    echo $web;
     $textStripTagsLi = strip_tags($web, ['li']);
-    // $textStripTagsDiv = strip_tags($textDiv, ['div']);
+    // $textStripTagsDiv = strip_tags($web, ['div']);
     // $textStripTagsA = strip_tags($web, ['a']);
 
     $star = '*';
