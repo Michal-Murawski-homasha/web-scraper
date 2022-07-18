@@ -12,14 +12,14 @@
     $web = file_get_contents('https://pl.wikipedia.org/wiki/Miasta_w_Polsce#Lista_miast_w_Polsce_w_porz%C4%85dku_alfabetycznym');
     echo 'Ilość znaków przed przetworzeniem: '.strlen($web).'<br>';
     echo $web;
-    $textStripTags = strip_tags($web);
-    echo 'Ilość znaków po przetworzeniu '.strlen($textStripTags);
+    $textStripTags = strip_tags($web, 'div, p');
+    // $textStripTags = str_replace('/\<div\>\<\/div\>/', '/\<br\>/', $web);
+    echo 'Ilość znaków po przetworzeniu '.strlen($textStripTags).'<br>';
     echo "<p>$textStripTags</p>";
     // $textStripTagsDiv = strip_tags($web, ['div']);
     // $textStripTagsLi = strip_tags($web, ['li']);
     // $textStripTagsA = strip_tags($web, ['a']);
 
-    // echo str_replace($star, $brake, $textStrReplaceLi);
 
     // if (preg_match($aTab, $textStripTagsA)) {
     //   $textStrReplaceA = str_replace($aTab, $brake, $textStripTagsA);
