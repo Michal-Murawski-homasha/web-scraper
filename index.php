@@ -18,6 +18,19 @@
     echo '<h2>Ilość znaków po przetworzeniu '. strlen($textStripTags) . '</h2><br>';
 
     echo "<p>$textStripTags</p><br>";
+
+    $doc = new DOMDocument($textStripTags);
+
+    $doc->dormatOutput = true;
+
+    $date = date('YmdHis');
+    $text = $doc->createTextNode($textStripTags);
+
+    $formatFile = $date . '.txt';
+    $doc->save($date . '.txt');
+    echo $date;
+    echo $formatFile;
+    echo $saveFile;
   ?>
 </body>
 </html>
