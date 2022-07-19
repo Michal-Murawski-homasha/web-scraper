@@ -15,6 +15,10 @@
 
     echo '<h2>Ilość znaków przed przetworzeniem: '. strlen($web) . '</h2><br>';
 
+    $dom = new DOMDocument;
+    $dom->loadHTML($web);
+    $body = $dom->getElementsByTagName('body');
+
     $textStripTags = strip_tags($web);
 
     echo '<h2>Ilość znaków po przetworzeniu '. strlen($textStripTags) . '</h2><br>';
