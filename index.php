@@ -34,7 +34,6 @@
     $doc->save($date . '.txt');
     echo $date;
     echo $formatFile;
-    echo $saveFile;
   ?>
 </body>
 </html>
