@@ -9,6 +9,8 @@
 <body>
   <?php
 
+    //////////////////////////////////////
+    // Load file and remove some of tags.
     $web = file_get_contents('https://pl.wikipedia.org/wiki/Miasta_w_Polsce#Lista_miast_w_Polsce_w_porz%C4%85dku_alfabetycznym');
 
     echo '<h2>Ilość znaków przed przetworzeniem: '. strlen($web) . '</h2><br>';
@@ -19,6 +21,8 @@
 
     echo "<p>$textStripTags</p><br>";
 
+    ///////////////////////////////////////////////////////////////
+    // Reads current date and write file in format currendate.txt.
     $doc = new DOMDocument($textStripTags);
 
     $doc->dormatOutput = true;
