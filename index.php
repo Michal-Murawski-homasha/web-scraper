@@ -25,7 +25,7 @@
     // Reads current date and write file in format currendate.txt.
     $doc = new DOMDocument($textStripTags);
 
-    $doc->dormatOutput = true;
+    $doc->formatOutput = true;
 
     $date = date('YmdHis');
     $text = $doc->createTextNode($textStripTags);
