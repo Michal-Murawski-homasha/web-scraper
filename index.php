@@ -16,7 +16,7 @@
 <body>
 
   <form action="index.php" method="post">
-    <label for="httpAddress">Please insert full http address</label><br>
+    <label for="httpAddress">Please enter full http address</label><br>
     <input type="text" name="httpAddress"><input type="submit" value="Submit">
   </form>
 
