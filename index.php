@@ -15,8 +15,9 @@
 </head>
 <body>
 
-  <form action="#" method="$_POST">
-    <input type="text" name="urlAddress" value="Please insert url"><input type="submit" value="Submit">
+  <form action="#" method="post">
+    <label for="httpAddress">Please insert full http address</label>
+    <input type="text" name="urlAddress"><input type="submit" value="Submit">
   </form>
 
   <?php
