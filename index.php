@@ -1,8 +1,8 @@
 <?php
-//  if (session_status() == PHP_SESSION_NONE)
-//  {
-//    session_start();
-//  }
+  if (session_status() == PHP_SESSION_NONE)
+  {
+    session_start();
+  }
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +17,7 @@
 
   <form action="index.php" method="post">
     <label for="httpAddress">Please insert full http address</label><br>
-    <input type="text" name="urlAddress"><input type="submit" value="Submit">
+    <input type="text" name="httpAddress"><input type="submit" value="Submit">
   </form>
 
   <?php
@@ -25,7 +25,7 @@
     //////////////////////////////////////
     // Load file and remove some of tags.
     $httpAddress = $_POST['httpAddress'];
-    $web = stream_get_contents($httpAddress);
+    $web = file_get_contents($httpAddress);
 
     echo '<h2>Ilość znaków przed przetworzeniem: '. strlen($web) . '</h2><br>';
 
