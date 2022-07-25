@@ -7,6 +7,11 @@
   <title>scraper</title>
 </head>
 <body>
+
+  <form action="#" method="$_POST">
+
+  </form>
+
   <?php
 
     //////////////////////////////////////
