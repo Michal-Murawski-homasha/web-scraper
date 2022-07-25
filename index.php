@@ -1,8 +1,8 @@
 <?php
-  if (session_status() == PHP_SESSION_NONE)
-  {
-    session_start();
-  }
+//  if (session_status() == PHP_SESSION_NONE)
+//  {
+//    session_start();
+//  }
 ?>
 
 <!DOCTYPE html>
@@ -15,8 +15,8 @@
 </head>
 <body>
 
-  <form action="#" method="post">
-    <label for="httpAddress">Please insert full http address</label>
+  <form action="index.php" method="post">
+    <label for="httpAddress">Please insert full http address</label><br>
     <input type="text" name="urlAddress"><input type="submit" value="Submit">
   </form>
 
@@ -24,7 +24,8 @@
 
     //////////////////////////////////////
     // Load file and remove some of tags.
-    $web = file_get_contents('https://pl.wikipedia.org/wiki/Miasta_w_Polsce#Lista_miast_w_Polsce_w_porz%C4%85dku_alfabetycznym');
+    $httpAddress = $_POST['httpAddress'];
+    $web = stream_get_contents($httpAddress);
 
     echo '<h2>Ilość znaków przed przetworzeniem: '. strlen($web) . '</h2><br>';
 
