@@ -9,7 +9,7 @@
 <body>
 
   <form action="#" method="$_POST">
-    <input type="text" name="urlAddress" value="Please insert url">
+    <input type="text" name="urlAddress" value="Please insert url"><input type="submit" value="Submit">
   </form>
 
   <?php
