@@ -31,7 +31,7 @@
 
     $textStripTags = strip_tags($web);
 
-    echo '<h2>Ilość znaków po przetworzeniu '. strlen($textStripTags) . '</h2><br>';
+    echo '<h2>Liczba znaków po przetworzeniu '. strlen($textStripTags) . '</h2><br>';
 
     echo "<p>$textStripTags</p><br>";
 
