@@ -27,7 +27,7 @@
     $httpAddress = $_POST['httpAddress'];
     $web = file_get_contents($httpAddress);
 
-    echo '<h2>Ilość znaków przed przetworzeniem: '. strlen($web) . '</h2><br>';
+    echo '<h2>Liczba znaków przed przetworzeniem: '. strlen($web) . '</h2><br>';
 
     $textStripTags = strip_tags($web);
 
