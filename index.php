@@ -22,8 +22,6 @@
 
   <?php
 
-    //////////////////////////////////////
-    // Load file and remove some of tags.
     $httpAddress = $_POST['httpAddress'];
     $web = file_get_contents($httpAddress);
 
