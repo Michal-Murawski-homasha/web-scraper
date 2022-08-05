@@ -35,8 +35,6 @@
 
     echo "<p>$textStripTags</p><br>";
 
-    ///////////////////////////////////////////////////////////////
-    // Reads current date and write file in format currendate.txt.
     $doc = new DOMDocument($textStripTags);
 
     $doc->formatOutput = true;
